@@ -5,6 +5,7 @@ import Profile from './Profile';
 import Community from './Components/Community/Community';
 import Branch from './Components/Branch/Branch';
 import HProfile from './Components/HProfile/HProfile';
+import Home from './Home';
 import Chat from './Components/Chats/Chat';
 import Layout from './Layout';
 import HomeSec from './HomeSec';
@@ -32,7 +33,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path='/' element={<Home/>}/>
+        <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
 
         {/* Nested routes under Layout */}

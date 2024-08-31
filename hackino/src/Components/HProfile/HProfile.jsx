@@ -77,7 +77,7 @@ const HProfile = () => {
       <div className="post-section">
         <div className="posts">Posts</div>
         {posts.map((post, index) => (
-          <div key={index} className="post">
+          <div key={index} className="hpost">
             {post}
           </div>
         ))}

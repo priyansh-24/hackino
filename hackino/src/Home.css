@@ -1,25 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
-    margin: 0; /* Added margin reset */
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
-}
-
 :root {
-    --main-color: #44588d;
-    --black: #13131a;
-    --bg: #010103;
-    --border: .1rem solid rgba(255, 255, 255, .3);
+    --home-main-color: #44588d;
+    --home-black: #13131a;
+    --home-bg: #d4f1f4;
+    --home-border: .1rem solid rgba(255, 255, 255, .3);
 }
 
-/* Remove font-size from html */
 html {
     overflow-x: hidden;
     scroll-padding-top: 9rem;
@@ -40,93 +27,91 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    background: var(--bg);
+    background: var(--home-bg);
 }
 
-section {
+.home-section {
     padding: 20px 7%;
 }
 
-.btn {
+.home-btn {
     margin-top: 10px;
     display: inline-block;
     padding: 8px 30px;
     font-size: 17px;
     color: #fff;
-    background: #44588d;
+    background: var(--home-main-color);
     cursor: pointer;
     border-radius: 8px;
 }
 
-.btn:hover {
+.home-btn:hover {
     letter-spacing: 1px;
 }
 
-/* Header styles */
-.header {
-    background: var(--bg);
+.home-header {
+    background: var(--home-bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 7%;
-    border-bottom: var(--border);
+    border-bottom: var(--home-border);
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
 }
 
-.header .logo img {
+.home-logo img {
     height: 60px;
 }
 
-.header .navbar a {
+.home-navbar a {
     margin: 0 10px;
-    font-size: 16px;
-    color: #fff;
+    font-size: 20px;
+    color: #000000;
 }
 
-.header .navbar a:hover {
-    color: var(--main-color);
-    border-bottom: 1px solid var(--main-color);
+.home-navbar a:hover {
+    color: var(--home-main-color);
+    border-bottom: 1px solid var(--home-main-color);
     padding-bottom: 5px;
 }
 
-.header .icons div {
+.home-icons div {
     color: #fff;
     cursor: pointer;
     font-size: 25px;
     margin-left: 20px;
 }
 
-.header .icons div:hover {
-    color: var(--main-color);
+.home-icons div:hover {
+    color: var(--home-main-color);
 }
 
-#menu-btm {
+#home-menu-btn {
     display: none;
 }
 
-/* Home section styles */
-.home {
+.home-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(Bg3.webp) no-repeat;
+    background: url(Photo/Bg3.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.home .content {
+.home-content {
     max-width: 600px;
 }
 
-.home .content h3 {
+.home-content h3 {
     font-size: 60px;
     text-transform: uppercase;
     color: hsl(136, 4%, 51%);
 }
 
-.home .content p {
+.home-content p {
     font-size: 20px;
     font-weight: lighter;
     color: hsl(136, 4%, 51%);
@@ -134,106 +119,151 @@ section {
     padding: 10px 0;
 }
 
-/* About section styles */
-.about {
+.home-about {
     min-height: 100vh;
     align-items: center;
-    background: url(Bg3.webp) no-repeat;
+    background: url(Photo/Bg3.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.about .row {
+.home-row {
     display: flex;
     align-items: center;
-    background: var(--black);
+    background: var(--home-black);
     flex-wrap: wrap;
 }
 
-.about .row .image {
+.home-image {
     flex: 1 1 450px;
 }
 
-.about .row .image img {
+.home-image img {
     width: 100%;
 }
 
-.about .row .content {
+.home-content {
     flex: 1 1 450px;
     padding: 20px;
 }
 
-.about .row .content h3 {
+.home-content h3 {
     font-size: 30px;
-    color: #fff;
+    color: #d4f1f4;
 }
 
-.about .row .content p {
+.home-content p {
     font-size: 16px;
     color: #ccc;
     padding: 10px 0;
     line-height: 1.8;
 }
+/* Contact section styles */
+.home-contact {
+    min-height: 100vh;
+    background: url(Photo/Bg3.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
 
-/* Scoped media query for the Home section */
+.home-contact-form {
+    max-width: 600px;
+    width: 100%;
+    background: var(--home-black);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.home-contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-input-box {
+    margin-bottom: 20px;
+}
+
+.home-input-box input,
+.home-input-box textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: var(--home-border);
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+}
+
+.home-input-box textarea {
+    resize: none;
+    height: 150px;
+}
+
+.home-input-box input[type="submit"] {
+    cursor: pointer;
+    background: var(--home-main-color);
+    border: none;
+    color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.home-input-box input[type="submit"]:hover {
+    background: hsl(216, 21%, 50%);
+}
+
 @media (max-width: 991px) {
-    .home {
+    .home-section {
         font-size: 55%;
     }
-    .header {
+    .home-header {
         padding: 15px 2%;
-    }
-    .home section {
-        padding: 20px;
     }
 }
 
-/* Scoped media query for smaller screens affecting the Home section */
 @media (max-width: 768px) {
-    #menu-btn {
+    #home-menu-btn {
         display: inline-block;
     }
-    .header .navbar {
+    .home-navbar {
         position: absolute;
         top: 100%;
         right: -100%;
         background: #fff;
         width: 300px;
         height: calc(100vh - 95px);
-        transition: right 0.3s ease-in-out; /* Added transition */
+        transition: right 0.3s ease-in-out;
     }
-    .header .navbar.active {
+    .home-navbar.active {
         right: 0;
     }
-    .header .navbar a {
-        color: var(--black);
+    .home-navbar a {
+        color: var(--home-black);
         display: block;
         margin: 15px;
         padding: 5px;
         font-size: 20px;
     }
-    .home {
+    .home-section {
         background-position: left;
         justify-content: center;
         text-align: center;
     }
-    .home .content h3 {
+    .home-content h3 {
         font-size: 45px;
     }
-    .home .content p {
+    .home-content p {
         font-size: 15px;
     }
 }
 
-/* Scoped media query for the About section */
 @media (max-width: 991px) {
-    .about {
+    .home-about {
         font-size: 55%;
     }
-    .about section {
-        padding: 20px;
-    }
 }
-
-
-

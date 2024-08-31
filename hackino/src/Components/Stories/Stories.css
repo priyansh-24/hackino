@@ -4,6 +4,7 @@
     padding:4px;
     border-radius: 10px;
     border-color: black;
+    border: 3px solid #46666a;
   }
   .stories-container::-webkit-scrollbar {
     width: 0;
