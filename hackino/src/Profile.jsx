@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Profile.css";
-import profile from './Photo/Bg2.jpg';
+
 
 function Profile() {
-  const [profilePicture, setProfilePicture] = useState('Background.jpg');
+  const [profilePicture, setProfilePicture] = useState();
   const [userName, setUserName] = useState('John Doe');
   const [userContact, setUserContact] = useState('94371XXXXX');
   const [userTitle, setUserTitle] = useState('Full Stack Developer');
@@ -30,13 +30,12 @@ function Profile() {
   };
 
   return (
-    <main className="main-content">
       <div className="container">
         <div className="profile-card">
           <form id="profileForm" onSubmit={handleFormSubmit}>
             <div className="profile-header">
               <h1 className="profile-tag">Profile</h1>
-              <img src={profilePicture} alt={profile} className="profile-picture" />
+              <img src={profilePicture} alt="" className="profile-picture" />
               <input type="file" id="changePictureInput" style={{ display: 'none' }} onChange={handlePictureChange} />
               <button type="button" id="changePictureBtn" onClick={() => document.getElementById('changePictureInput').click()}>Change Picture</button>
             </div>
@@ -89,7 +88,6 @@ function Profile() {
           </form>
         </div>
       </div>
-    </main>
   );
 }
 

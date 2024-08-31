@@ -12,7 +12,7 @@ function Menu() {
         <Link to='community' className="Community-btn">Clubs</Link>
         <Link to='chat' className="Chat-btn">Chats</Link>
         <Link to='branch' className="Branch-btn">Branch</Link>
-        <Link to='setting' className="Setting-btn">Setting</Link>
+        <Link to='hprofile' className="HProfile-btn">Profile</Link>
         </div>
         <div className="Post-btn">
             <button className="P-btn">Logout</button>

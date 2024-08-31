@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Login';
 import Profile from './Profile';
 import Community from './Components/Community/Community';
-import Setting from './Components/Setting/Setting';
 import Branch from './Components/Branch/Branch';
+import HProfile from './Components/HProfile/HProfile';
 import Chat from './Components/Chats/Chat';
 import Layout from './Layout';
 import HomeSec from './HomeSec';
@@ -41,7 +41,7 @@ function App() {
           <Route path="home" element={<HomeSec />} />
           <Route path="community" element={<Community />} />
           <Route path="chat" element={<Chat />} />
-          <Route path="setting" element={<Setting />} />
+          <Route path="hprofile" element={<HProfile />} />
           <Route path="branch" element={<Branch />} />
         </Route>
       </Routes>
