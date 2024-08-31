@@ -1,8 +1,46 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAPJyvRiNf7Ad1iRrpMx0_EDog2TIFtES8",
+  authDomain: "connexus-f57a6.firebaseapp.com",
+  projectId: "connexus-f57a6",
+  storageBucket: "connexus-f57a6.appspot.com",
+  messagingSenderId: "345541602561",
+  appId: "1:345541602561:web:dc3c16415450136e7c7f00",
+  measurementId: "G-HM96XZ1SWC"
+};
+
+// Initialize Firebase app
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
 
 function Login() {
+  const handleSignup = () => {
+
+    const userRef = ref(db, 'users/' + username);
+    set(userRef, {
+      name: username,
+      email: signupEmail,
+      password: signupPassword,
+    })
+    .then(() => {
+      console.log("Data successfully written to firebase!");
+      // Set an item in Local Storage
+      localStorage.setItem('uid', username);
+      navigate('/profile');
+
+    })
+    .catch((error) => {
+      console.error("Error writing data: ", error);
+    });
+  
+  };
+
   const [username, setUsername] = useState('');
   const [signupEmail, setSignupEmail] = useState('');
   const [signupPassword, setSignupPassword] = useState('');
@@ -14,13 +52,20 @@ function Login() {
 
   const handleSignupClick = (event) => {
     event.preventDefault();
-    console.log("Signup Data:");
-    console.log("Username:", username);
-    console.log("Email:", signupEmail);
-    console.log("Password:", signupPassword);
 
-    // Navigate to the profile page after handling the sign-up
-    navigate('/profile');
+    if(username!=""&&signupEmail!=""&&signupPassword!=""){
+      handleSignup();
+      
+    }
+    else{
+      alert('please fill all Detail to Sign up!');
+    
+    }
+   
+    
+    
+
+    
   };
 
   const handleLoginClick = (event) => {
