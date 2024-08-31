@@ -1,0 +1,188 @@
+/* styles.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #e5ddd5;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+header {
+  background-color: #2a2f32;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+#back-button:hover {
+  color: #20c057;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+  flex-grow: 1;
+}
+
+
+.sidebar {
+  width: 30%;
+  background-color: #2a2f32;
+  color: white;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.sidebar input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #323739;
+  color: white;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar input:focus {
+  background-color: #40474b;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #40474b;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar li:hover {
+  background-color: #3b4a54;
+  transform: scale(1.02);
+}
+
+.main-content {
+  width: 70%;
+  background-color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+#club-posts {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #dfdede;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: scale(1.02);
+}
+
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post-title {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.post-date {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.post-description {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6em;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.post-actions button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #25d366;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-actions button:hover {
+  background-color: #20c057;
+}

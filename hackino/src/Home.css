@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0; /* Added margin reset */
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+:root {
+    --main-color: #44588d;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255, 255, 255, .3);
+}
+
+/* Remove font-size from html */
+html {
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 20px 7%;
+}
+
+.btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 30px;
+    font-size: 17px;
+    color: #fff;
+    background: #44588d;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    letter-spacing: 1px;
+}
+
+/* Header styles */
+.header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 60px;
+}
+
+.header .navbar a {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    padding-bottom: 5px;
+}
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+#menu-btm {
+    display: none;
+}
+
+/* Home section styles */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(Bg3.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 600px;
+}
+
+.home .content h3 {
+    font-size: 60px;
+    text-transform: uppercase;
+    color: hsl(136, 4%, 51%);
+}
+
+.home .content p {
+    font-size: 20px;
+    font-weight: lighter;
+    color: hsl(136, 4%, 51%);
+    line-height: 1.8;
+    padding: 10px 0;
+}
+
+/* About section styles */
+.about {
+    min-height: 100vh;
+    align-items: center;
+    background: url(Bg3.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+}
+
+.about .row .image {
+    flex: 1 1 450px;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 450px;
+    padding: 20px;
+}
+
+.about .row .content h3 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.about .row .content p {
+    font-size: 16px;
+    color: #ccc;
+    padding: 10px 0;
+    line-height: 1.8;
+}
+
+/* Scoped media query for the Home section */
+@media (max-width: 991px) {
+    .home {
+        font-size: 55%;
+    }
+    .header {
+        padding: 15px 2%;
+    }
+    .home section {
+        padding: 20px;
+    }
+}
+
+/* Scoped media query for smaller screens affecting the Home section */
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 300px;
+        height: calc(100vh - 95px);
+        transition: right 0.3s ease-in-out; /* Added transition */
+    }
+    .header .navbar.active {
+        right: 0;
+    }
+    .header .navbar a {
+        color: var(--black);
+        display: block;
+        margin: 15px;
+        padding: 5px;
+        font-size: 20px;
+    }
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h3 {
+        font-size: 45px;
+    }
+    .home .content p {
+        font-size: 15px;
+    }
+}
+
+/* Scoped media query for the About section */
+@media (max-width: 991px) {
+    .about {
+        font-size: 55%;
+    }
+    .about section {
+        padding: 20px;
+    }
+}
+
+
+

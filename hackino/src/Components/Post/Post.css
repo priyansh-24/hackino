@@ -1,0 +1,80 @@
+.posts-container {
+  max-height: 540px; /* Set a fixed height for the scrollable container */
+/* Enable vertical scrolling */
+
+  width:100%;
+}
+.posts-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.post {
+  background-color: #fff;
+  border: 3px solid #46666a;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Ensure no gaps between inner and outer divs */
+  justify-content: center;
+  align-items: center;
+  margin: 10px; /* Center the post */
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  background-color: #d4f1f4;
+}
+
+.profile-img {
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.post-name {
+  font-size: 18px;
+  margin: 0;
+  color: black;
+}
+
+.post-jobTitle {
+  font-size: 14px;
+  margin: 0;
+  color: black;
+}
+
+.post-content {
+  background-color: white; /* Placeholder for content */
+  max-height: 280px; /* Set a max height for the scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 16px;
+  border-radius: 0 0 8px 8px;
+ 
+}
+.post-content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.post-suggestions {
+  padding: 16px;
+  font-size: 18px;
+  color: black;
+  width: 100%;
+  border-width: 2px;
+  background-color: whitesmoke; /* Semi-transparent background */
+}
+
+

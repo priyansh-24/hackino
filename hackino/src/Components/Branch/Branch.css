@@ -1,0 +1,40 @@
+.branch-container {
+  margin: 30px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .branch-list, .year-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .branch-item, .year-item {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .branch-item:hover, .year-item:hover {
+    background-color: #45a049;
+  }
+  
+  .students-container {
+    margin-top: 20px;
+  }
+  
+  .students-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .students-container li {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+  

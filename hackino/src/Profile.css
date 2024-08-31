@@ -1,0 +1,182 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url(Photo/Bg3.webp)  no-repeat center center fixed;
+    background-size: cover;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+   
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(98, 33, 33, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 450px;
+    width: 100%;
+    margin: 15px;
+    padding:15px;
+    background-color: #d4f1f4; 
+}
+
+.profile-card {
+   
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-tag {
+   
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.profile-picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #1d2439;
+}
+
+#changePictureBtn {
+    background-color: #44588d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#changePictureBtn:hover {
+    background-color: #526392;
+    transform: scale(1.05);
+}
+
+.profile-details, .profile-skills {
+    margin-bottom: 30px;
+}
+
+.profile-details h3, .profile-skills h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.profile-details label, .profile-skills label {
+    font-size: 16px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: black;
+    letter-spacing: 0.5px;
+}
+
+.profile-details input, .profile-skills input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #e9e6e6;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.profile-details input:focus, .profile-skills input:focus {
+    border-color: #44588d;
+    outline: none;
+    box-shadow: 0 0 5px rgba(65, 83, 102, 0.5);
+}
+
+.profile-actions {
+    text-align: center;
+}
+
+.profile-actions button {
+    background-color: #44588d;
+    color: whitesmoke;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-actions button:hover {
+    background-color: #4d5d8c;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .profile-header {
+        margin-bottom: 20px;
+    }
+
+    .profile-details input, .profile-skills input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .profile-tag {
+        font-size: 24px;
+    }
+
+    .profile-actions button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+        border: 3px solid #f0f0f0;
+    }
+
+    .profile-tag {
+        font-size: 22px;
+    }
+
+    .profile-actions button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

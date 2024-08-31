@@ -1,0 +1,80 @@
+.user-data {
+    width: 100%;
+    padding: 4px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #d4f1f4;;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    color: black;
+    border: 3px solid #46666a;
+    flex-wrap: wrap; 
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50px;
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.user-emna h2 {
+    margin-bottom: 4px; 
+    font-size: 1rem; /* Base size for medium screens */
+}
+
+.user-emna p {
+    margin-top: 0;
+    font-size: 0.875rem; /* Slightly smaller text */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .user-data {
+        width: 100%;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align content to the start */
+        padding: 12px; /* Add padding for better spacing */
+        border-radius: 10px; /* Adjust the border radius for a more rounded look */
+    }
+
+    .user-image {
+        width: 40px;
+        height: 40px;
+        margin-right: 0;
+        margin-bottom: 10px; /* Add space between the image and text */
+    }
+
+    .user-emna h2 {
+        font-size: 1.25rem; /* Slightly larger text for better readability */
+    }
+
+    .user-emna p {
+        font-size: 1rem; /* Adjust text size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .user-data {
+        padding: 10px; /* Further reduce padding for small screens */
+    }
+
+    .user-image {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 8px;
+    }
+
+    .user-emna h2 {
+        font-size: 1rem; /* Maintain readability on small screens */
+    }
+
+    .user-emna p {
+        font-size: 0.875rem; /* Smaller text for smaller screens */
+    }
+}
