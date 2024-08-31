@@ -10,18 +10,19 @@
 }
 .post {
   background-color: #fff;
-  border: 3px solid #46666a;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  padding: 0px;
   display: flex;
-  flex-direction: column; /* Ensure no gaps between inner and outer divs */
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 10px; /* Center the post */
 }
 
 .post-header {
+  margin-left: 20px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -69,6 +70,7 @@
 }
 
 .post-suggestions {
+  margin-left: 20px;
   padding: 16px;
   font-size: 18px;
   color: black;

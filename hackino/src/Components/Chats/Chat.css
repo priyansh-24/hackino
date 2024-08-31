@@ -1,240 +1,103 @@
-.club {
-    display: flex;
-    padding: 0px;
-    border: 3px solid #46666a;
-    border-radius: 12px;
-    margin-top: 10px;
+
+.conainer {
+    height: 680px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
     width: 96%;
-    height: 85vh;
-    overflow: hidden;
-  }
-  
-  .sidebar {
-    width: 30%;
+    display: flex;
+    border: 3px solid #3b4a54;
+    flex-direction: column;
+}
+
+.toggle-buttons {
+    padding: 20px;
+    padding-top: 0px;
+    position:sticky;
+    top: 0;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    z-index: 1000;
+}
+
+.toggle-buttons button {
+    width: 50%;
+    height: 50px;
     background-color: #2a2f32;
     color: white;
-    border-right: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  .sidebar input {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
     border: none;
-    border-radius: 20px;
-    background-color: #323739;
-    color: white;
-    outline: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sidebar input:focus {
-    background-color: #40474b;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow-y: auto;
-    flex-grow: 1;
-  }
-  
-  .sidebar li {
-    padding: 15px 20px;
     cursor: pointer;
-    border-bottom: 1px solid #40474b;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .sidebar li:hover {
-    background-color: #3b4a54;
-    transform: scale(1.02);
-  }
-  
-  .main-content {
-    width: 70%;
-    height: 780px;
-    background-color: #ffffff;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .tab-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-    position: sticky;
-    top: 30px;
-    background-color: #ffffff;
-    z-index: 10;
-  }
-  
-  .tab-button {
-    height: 25px;
-    padding:15px;
-    padding-bottom: 30px;
-    margin: 10px;
-    margin-top: -12px;
-    width: 50%;
     border-radius: 5px;
-    background-color: #3a3a3a;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .tab-button.active {
-    background-color: #689578;
-  }
-  
-  #club-posts {
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .post-card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    background-color: #dfdede;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   
-    transition: transform 0.3s ease;
-  }
-  
-  .post-card:hover {
-    transform: scale(1.02);
-  }
-  
-  .post-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .post-content {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .post-title {
-    font-size: 1.5em;
-    color: #333;
-  }
-  
-  .post-date {
-    font-size: 0.9em;
-    color: #777;
-  }
-  
-  .post-description {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6em;
-  }
-  
-  .post-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-  }
-  
-  .post-actions button {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #25d366;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .post-actions button:hover {
-    background-color: #20c057;
-  }
-  #club-chats {
+    font-size: 16px;
+}
 
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .chat-window {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    background-color: #f1f1f1;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 100px;
-    box-sizing: border-box;
-    overflow-y: auto;/* Adjust to make space for the input */
-  }
-  
-  .chat-message {
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 70%;
-  }
-  
-  .chat-message.self {
-    align-self: flex-end;
-    background-color: #dcf8c6;
-  }
-  
-  .chat-input {
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    border-top: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius:  10px;
-  }
-  
-  .chat-input input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
+.toggle-buttons button.active {
+    background-color: #557889;
+}
+
+.toggle-buttons button:hover {
+    background-color: #3b4a54;
+}
+
+#content {
+    padding: 2rem;
+    margin-top: 3rem; /* Space to avoid overlap with fixed buttons */
+}
+
+.project-tab {
+    border: 1px solid #ddd;
     border-radius: 5px;
-    margin-right: 10px;
-    box-sizing: border-box;
-  }
-  
-  .chat-input button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #25d366;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+}
+
+.project-tab h2 {
+    margin-top: 0;
+}
+
+button {
+    background-color: #4CAF50;
     color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .chat-input button:hover {
-    background-color: #20c057;
-  }
-  
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input[type="text"], textarea, input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}

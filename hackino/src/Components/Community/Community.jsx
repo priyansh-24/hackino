@@ -200,7 +200,7 @@ function Community() {
               <div id="club-posts">
                 {selectedPosts.map(post => (
                   <div className="post-card" key={post.title}>
-                    <img src={post.image} alt={post.title} />
+                    <img src={post.image} alt="" />
                     <div className="post-content">
                       <div className="post-title">{post.title}</div>
                       <div className="post-date">{post.date}</div>

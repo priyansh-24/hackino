@@ -10,8 +10,7 @@ function Menu() {
         <div className="a-tags">
       <Link to='home'  className="Home-btn">Home </Link> 
         <Link to='community' className="Community-btn">Clubs</Link>
-        <Link to='chat' className="Chat-btn">Chats</Link>
-        <Link to='branch' className="Branch-btn">Branch</Link>
+        <Link to='chat' className="Chat-btn">Projects</Link>
         <Link to='hprofile' className="HProfile-btn">Profile</Link>
         </div>
         <div className="Post-btn">

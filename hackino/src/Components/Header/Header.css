@@ -3,8 +3,6 @@ body{
 }
 .header {
     background-color: #d4f1f4;
-    border-bottom: 3px solid #46666a;
-    border-top: 3px solid #46666a;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;

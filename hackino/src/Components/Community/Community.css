@@ -3,8 +3,8 @@
     padding: 0px;
     border: 3px solid #46666a;
     border-radius: 12px;
-    margin-top: 40px;
-    width: 100%;
+    margin-top: 10px;
+    width: 96%;
     height: 85vh;
     overflow: hidden;
   }
@@ -105,9 +105,10 @@
   }
   
   .post-card {
+    
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #dfdede;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    
@@ -119,6 +120,9 @@
   }
   
   .post-card img {
+    background-image: url(Bg3.webp);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
     width: 100%;
     height: 200px;
     object-fit: cover;

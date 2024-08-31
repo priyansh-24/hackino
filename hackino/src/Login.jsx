@@ -87,9 +87,9 @@ function Login() {
               <label class="login-label" htmlFor="chk" aria-hidden="true">Sign up</label>
               <input
                class="input-btn"
-                type="text"
+                type="txt"
                 name="username"
-                placeholder="User name"
+                placeholder="UserName"
                 required=""
                 onChange={(e) => setUsername(e.target.value)}
               />
