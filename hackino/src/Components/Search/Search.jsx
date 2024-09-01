@@ -78,7 +78,7 @@ function Search() {
           ))}
         </ul>
       </div>
-      <div className="main-content">
+      <div className="maain-content">
         {selectedSkill && (
           <>
             <h3>Profiles with skill: {selectedSkill}</h3>
