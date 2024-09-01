@@ -81,7 +81,7 @@ function Profile() {
   };
 
   return (
-    <div className="main-content">
+    <div className="mani-content">
       <div className="container">
         <div className="profile-card">
           <form id="profileForm" onSubmit={handleFormSubmit}>
