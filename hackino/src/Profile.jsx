@@ -23,7 +23,7 @@ const storage = getStorage(app);
 
 function Profile() {
   const [profilePicture, setProfilePicture] = useState('Background.jpg');
-  const [userName, setUserName] = useState('John Doe');
+  const [userName, setUserName] = useState('123XX346');
   const [userContact, setUserContact] = useState('94371XXXXX');
   const [userTitle, setUserTitle] = useState('Full Stack Developer');
   const [userSkills, setUserSkills] = useState('HTML, CSS, JavaScript, React, Node.js');
@@ -94,7 +94,7 @@ function Profile() {
 
             <div className="profile-details">
               <h3>Details</h3>
-              <label htmlFor="userName">Name:</label>
+              <label htmlFor="userName">Roll No</label>
               <input
                 type="text"
                 id="userName"
