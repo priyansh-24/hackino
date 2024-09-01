@@ -5,10 +5,10 @@ import Profile from './Profile';
 import Community from './Components/Community/Community';
 import Branch from './Components/Branch/Branch';
 import HProfile from './Components/HProfile/HProfile';
-import Home from './Home';
 import Chat from './Components/Chats/Chat';
 import Layout from './Layout';
 import HomeSec from './HomeSec';
+import Search from './Components/Search/Search';
 import LoadingScreen from './loader'; // Import the loading screen component
 import './App.css'; // Import the CSS file
 
@@ -33,8 +33,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path="/login" element={<Login />} />
+
+        <Route path="/" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
 
         {/* Nested routes under Layout */}
@@ -44,7 +44,7 @@ function App() {
           <Route path="community" element={<Community />} />
           <Route path="chat" element={<Chat />} />
           <Route path="hprofile" element={<HProfile />} />
-          <Route path="branch" element={<Branch />} />
+          <Route path="search" element={<Search />} />
         </Route>
       </Routes>
     </Router>

@@ -56,7 +56,7 @@
     margin-top: 0;
 }
 
-button {
+.project-btn {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -70,22 +70,22 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
+.project-btn:hover {
     background-color: #45a049;
 }
 
-form {
+.container form {
     max-width: 600px;
     margin: 0 auto;
 }
 
-label {
+.container label {
     display: block;
     margin-top: 1rem;
     font-weight: bold;
 }
 
-input[type="text"], textarea, input[type="file"] {
+.container input[type="text"], textarea, input[type="file"] {
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.5rem;
@@ -93,7 +93,7 @@ input[type="text"], textarea, input[type="file"] {
     border: 1px solid #ddd;
 }
 
-textarea {
+.container textarea {
     resize: vertical;
     height: 150px;
 }

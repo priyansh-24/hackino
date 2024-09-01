@@ -11,6 +11,7 @@ function Menu() {
       <Link to='home'  className="Home-btn">Home </Link> 
         <Link to='community' className="Community-btn">Clubs</Link>
         <Link to='chat' className="Chat-btn">Projects</Link>
+        <Link to='search' className="Search-btn">Search</Link>
         <Link to='hprofile' className="HProfile-btn">Profile</Link>
         </div>
         <div className="Post-btn">

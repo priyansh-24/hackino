@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+import { getDatabase, ref, set,get,child } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+
+
+
+
+
 // Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAPJyvRiNf7Ad1iRrpMx0_EDog2TIFtES8",
@@ -40,6 +45,33 @@ function Login() {
     });
   
   };
+  function getData() {
+    // Reference to the path from where you want to read data
+    const dbRef = ref(getDatabase());
+
+    // Get data from the database
+    get(child(dbRef, 'users/'+loginEmail))
+        .then((snapshot) => {
+            if (snapshot.exists()) {
+              if(loginPassword==snapshot.child('password').val()){
+                navigate('/layout');
+              }
+              else {
+               alert('password incorrect');
+              
+            }
+                console.log("Data retrieved from the database:", snapshot.val());
+             } 
+            else {
+                console.log("No data available at the specified path.");
+              
+            }
+        })
+        .catch((error) => {
+            console.error("Error retrieving data from the database:", error);
+            document.getElementById('output').innerText = "Error retrieving data from the database.";
+        });
+}
 
   const [username, setUsername] = useState('');
   const [signupEmail, setSignupEmail] = useState('');
@@ -70,10 +102,10 @@ function Login() {
 
   const handleLoginClick = (event) => {
     event.preventDefault(); 
+    getData()
     console.log("Login Data:");
-    console.log("Email:", loginEmail);
+    console.log("Username:", loginEmail);
     console.log("Password:", loginPassword);
-    navigate('/layout');
   };
 
   return (
@@ -87,9 +119,9 @@ function Login() {
               <label class="login-label" htmlFor="chk" aria-hidden="true">Sign up</label>
               <input
                class="input-btn"
-                type="txt"
+                type="text"
                 name="username"
-                placeholder="UserName"
+                placeholder="User name"
                 required=""
                 onChange={(e) => setUsername(e.target.value)}
               />
@@ -141,4 +173,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Login;

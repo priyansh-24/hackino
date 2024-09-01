@@ -106,7 +106,7 @@ const clubsData = [
     ]
 },
 {
-    name: 'GDSE',
+    name: 'GDSC',
     posts: [
         {
             title: 'App Development Challenge',
