@@ -76,21 +76,11 @@ const HProfile = () => {
       {/* Post Section */}
       <div className="post-section">
         <div className="posts">Posts</div>
-        <div className="post-header">
-        <div className="post-image">
-          <img src="\src\Components\HProfile\img.jpg" alt={`${name}'s profile`} className="profile-img" />
-        </div>
-        <div className="post-info">
-          <h2 className="post-name">meena</h2>
-          <p className="post-jobTitle">app developer</p>
-        </div>
-      </div>
-      <div className="post-content">
-        {content}
-      </div>
-      <div className="post-suggestions">
-        Suggestions:
-      </div>
+        {posts.map((post, index) => (
+          <div key={index} className="hpost">
+            {post}
+          </div>
+        ))}
       </div>
     </div>
   );
